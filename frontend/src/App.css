@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(206, 235, 255);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.register-container {
+  padding: 20px;
+  width: 95%; 
+  margin-top: 20px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'fantasy', sans-serif;
+  color: blue;
+}
+
+.register-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: darkblue;
+}
