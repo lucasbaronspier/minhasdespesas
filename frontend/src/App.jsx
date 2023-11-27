@@ -6,7 +6,10 @@ import Card from "./components/cards/card";
 export default function App() {
   const [values, setValues] = useState();
   const [listCard, setListCard] = useState([]);
+  const [totalCost, setTotalCost] = useState(0);
+
   console.log(listCard);
+
   const handleRegisterGame = () => {
     Axios.post("http://localhost:3001/register", {
       name: values.name,
@@ -31,6 +34,16 @@ export default function App() {
     });
   };
 
+  const handleCalculate = () => {
+    Axios.get("http://localhost:3001/getTotal").then((response) => {
+      const totalCostValue = response.data[0]["somaTotal"];
+      console.log(response.data);
+      setTotalCost(totalCostValue);
+      console.log(totalCostValue);
+    });
+  };
+  
+
   useEffect(() => {
     Axios.get("http://localhost:3001/getCards").then((response) => {
       setListCard(response.data);
@@ -43,6 +56,8 @@ export default function App() {
       [value.target.name]: value.target.value,
     }));
   };
+
+
 
   return (
     <div className="app-container">
@@ -86,6 +101,17 @@ export default function App() {
               Cadastrar
             </button>
           </th>
+
+          <th>
+            <button onClick={handleCalculate} className="calc-button">
+              Calcular Total
+            </button>
+          </th>
+
+          <th className="total-cost-container">
+            <p>R${totalCost}</p>
+          </th>
+
         </div>
       </div>
 
@@ -105,9 +131,9 @@ export default function App() {
             ))}
           </div>
         </th>
-        <th>
-          
-        </th>
+        
+       
+
       </div>
       
       

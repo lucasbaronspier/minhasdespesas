@@ -35,8 +35,9 @@ body {
 }
 
 .cards-container {
+  width: 70%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -65,6 +66,35 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.calc-button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 50px;
+}
+
+.total-cost-container {
+  background-color: #fff;
+  border: 2px solid blue;
+  border-radius: 8px;
+  padding: 10px;
+  height: 37px;
+  box-sizing: border-box;
+  margin-left: 50px; /* Ajuste conforme necessário */
+  color: blue;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.total-cost-container p {
+  margin: 0;
 }
 
 .register-button:hover {

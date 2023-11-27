@@ -56,6 +56,18 @@ app.get("/getCards", (req, res) => {
   });
 });
 
+//Read Calcular
+app.get("/getTotal", (req, res) => {
+  let mysql = "select sum(d.cost) as somaTotal from despesa d";
+  db.query(mysql, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 //Update
 
 app.put("/edit", (req, res) => {
