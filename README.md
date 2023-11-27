@@ -1,6 +1,6 @@
 # MinhasDespesas
 
-![Logo do Projeto](link_para_o_logo.png)
+![Logo do Projeto](frontend/src/img/telaInicial.bmp)
 
 Projeto web para cadastro de despesas desenvolvido por Lucas Baron Spier como parte da disciplina de Programação 4 na Unoesc.
 
