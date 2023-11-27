@@ -1,0 +1,11 @@
+create database minhasdespesas;
+
+CREATE TABLE despesa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    cost float(10,2),
+    category VARCHAR(100)
+);
+
+
+select sum(d.cost) as somaTotal from despesa d;
